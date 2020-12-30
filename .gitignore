@@ -11,7 +11,7 @@ media
 
 # If you are using PyCharm #
 .idea/**/workspace.xml
-.idea/**/tasks.xml 
+.idea/**/tasks.xml
 .idea/dictionaries
 .idea/**/dataSources/
 .idea/**/dataSources.ids
@@ -98,3 +98,4 @@ Control.last-run
 Control.ca-list
 Control.ca-bundle
 Control.system-ca-bundle
+/my.cnf
