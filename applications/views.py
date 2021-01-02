@@ -1,17 +1,19 @@
 from applications.models import Application
-from rest_framework import viewsets
-from rest_framework import permissions
 from applications.serializers import ApplicationSerializer
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
+from loanable_api.authentication import LoanableApiAuthentication
 from rest_framework.response import Response
-
 
 class ApplicationViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows application to be viewed or edited.
     """
+    authentication_classes = (LoanableApiAuthentication,)
     queryset = Application.objects.all().order_by('-created_at')
     serializer_class = ApplicationSerializer
-    permission_classes = [permissions.IsAuthenticated]
+
+    permission_classes = (IsAuthenticated,)
 
     # def list(self, request, pk=None):
     #     return Response({
@@ -19,4 +21,3 @@ class ApplicationViewSet(viewsets.ModelViewSet):
     #             "applicationType": "ShortTermLoan",
     #             "createdAt": "2020-12-30 10:53:37"
     #         })
-

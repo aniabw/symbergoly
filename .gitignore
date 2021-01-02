@@ -99,3 +99,4 @@ Control.ca-list
 Control.ca-bundle
 Control.system-ca-bundle
 /my.cnf
+*.py
