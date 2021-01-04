@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'applications',
     'rest_framework',
     'users',
+    'security',
 ]
 
 MIDDLEWARE = [
@@ -133,7 +134,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DEFAULT_AUTHENTICATION_CLASSES': [
-            'loanable_api.authentication.LoanableApiAuthentication',
+            'security.views.LoanableApiAuthentication',
     ],
 }
 
