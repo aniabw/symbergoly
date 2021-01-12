@@ -8,7 +8,9 @@ class LoanableApiAuthentication(authentication.BaseAuthentication):
 
     def authenticate(self, request):
         affiliate_network = request.headers.get('X-Affiliate-Network')
-        bearer = request.headers.get('Authorization').partition(" ")[2]
+        bearer = request.headers.get('Authorization')
+        if bearer:
+            bearer = bearer.partition(" ")[2]
 
         if not affiliate_network or not bearer:
             raise exceptions.AuthenticationFailed('No credentials provided.')

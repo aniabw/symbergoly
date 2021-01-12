@@ -10,7 +10,11 @@ class AffiliateUserAdmin(UserAdmin):
 
     filter_horizontal = ()
     list_filter = ()
-    fieldsets = ()
+    fieldsets = (
+        ('AffiliateUser', {'fields': ('affiliate_network', 'first_name', 'last_name', 'email',
+                                      'username', 'is_admin', 'is_active', 'is_staff', 'is_superuser',
+                                      'password', 'is_enabled')}),
+    )
 
 
 admin.site.register(AffiliateUser, AffiliateUserAdmin)

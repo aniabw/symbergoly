@@ -14,6 +14,9 @@ class AffiliateNetworks(models.Model):
     application_limit_per_day = models.PositiveSmallIntegerField(blank=True, null=True)
     accepts_conversion_limit = models.CharField(max_length=15, blank=True, null=True)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         db_table = 'affiliate_networks'
 
