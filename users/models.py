@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+import users.utils as utils
 
 
 class AffiliateNetworks(models.Model):
@@ -40,6 +41,7 @@ class AffiliateUserManager(BaseUserManager):
         user = self.model(
             email=self.normalize_email(email),
             username=username,
+            token_string=utils.generate_token()
         )
 
         user.set_password(password)
