@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from users.models import AffiliateUser
+import users.utils as utils
 
 
 class AffiliateUserAdmin(UserAdmin):
@@ -15,6 +16,10 @@ class AffiliateUserAdmin(UserAdmin):
                                       'username', 'is_admin', 'is_active', 'is_staff', 'is_superuser',
                                       'password', 'is_enabled')}),
     )
+
+    def save_model(self, request, obj, form, change):
+        obj.token_string = utils.generate_token()
+        return super(AffiliateUserAdmin, self).save_model(request, obj, form, change)
 
 
 admin.site.register(AffiliateUser, AffiliateUserAdmin)
