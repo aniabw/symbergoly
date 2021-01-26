@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-# from users import views as user_views
-from applications import views as application_views
+# from apps.users import views as user_views
+from apps.applications import views as application_views
 
 router = routers.DefaultRouter(trailing_slash=False)
 # router.register(r'users', user_views.UserViewSet)

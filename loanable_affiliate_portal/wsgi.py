@@ -1,5 +1,5 @@
 """
-WSGI config for loanable_api project.
+WSGI config for loanable_affiliate_portal project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

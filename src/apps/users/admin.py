@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from users.models import AffiliateUser
-import users.utils as utils
+from apps.users.models import AffiliateUser
+import apps.users.utils as utils
 
 
 class AffiliateUserAdmin(UserAdmin):

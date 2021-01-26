@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
-import users.utils as utils
+import apps.users.utils as utils
 
 
 class AffiliateNetworks(models.Model):

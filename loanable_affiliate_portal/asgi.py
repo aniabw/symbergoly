@@ -1,5 +1,5 @@
 """
-ASGI config for loanable_api project.
+ASGI config for loanable_affiliate_portal project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

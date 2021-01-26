@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from users.models import AffiliateUser
+from apps.users.models import AffiliateUser
 from rest_framework import authentication
 from rest_framework import exceptions
 

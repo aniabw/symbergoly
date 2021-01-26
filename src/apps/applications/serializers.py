@@ -1,4 +1,4 @@
-from applications.models import Application
+from apps.applications.models import Application
 from rest_framework import serializers
 
 

@@ -1,9 +1,10 @@
-from applications.models import Application
-from applications.serializers import ApplicationSerializer
+from apps.applications.models import Application
+from apps.applications.serializers import ApplicationSerializer
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
-from security.views import LoanableApiAuthentication
+from apps.security.views import LoanableApiAuthentication
 from rest_framework.response import Response
+
 
 class ApplicationViewSet(viewsets.ModelViewSet):
     """
